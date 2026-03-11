@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Yauri — Web Developer</title>
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <!-- Logo / Brand -->
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>KZOLDYCK<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <!-- Animated canvas background -->
+    <canvas id="heroCanvas"></canvas>
+
+    <div class="hero-content">
+      <!-- Left: text -->
+      <div class="hero-text reveal">
+        <p class="hero-greeting">Hi There, I'm</p>
+        <h1 class="hero-name">Job Yauri</h1>
+        <div class="hero-role">
+          I am a <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          I craft fast, accessible and beautiful digital experiences.<br/>
+          Let's build something amazing together.
+        </p>
+        <div class="hero-cta">
+          <a href="#about" class="btn btn-primary">About Me</a>
+          <a href="#contact" class="btn btn-outline">Hire Me</a>
+        </div>
+        <!-- Social icons -->
+        <div class="hero-socials">
+          <a href="#" aria-label="LinkedIn"  class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="GitHub"    class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Twitter"   class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <!-- Right: avatar -->
+      <div class="hero-avatar reveal reveal-right">
+        <div class="avatar-ring">
+          <div class="avatar-inner">
+            <!-- profile image instead of SVG -->
+            <img src="img/perfil.png" alt="Job Yauri" class="avatar-img" />
+          </div>
+        </div>
+        <!-- Floating tech badges -->
+        <div class="float-badge badge-1">⚡ React</div>
+        <div class="float-badge badge-2">🚀 Node.js</div>
+        <div class="float-badge badge-3">🎨 CSS</div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator">
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About <span class="accent">Me</span></h2>
+      <p class="section-subtitle reveal">A little bit about who I am</p>
+
+      <div class="about-grid">
+        <!-- Photo card -->
+        <div class="about-photo-wrap reveal">
+          <div class="about-photo-card">
+            <div class="about-photo-bg"></div>
+            <div class="about-photo-frame">
+              <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg" class="about-svg">
+                <rect width="260" height="300" rx="16" fill="#0f172a"/>
+                <circle cx="130" cy="105" r="55" fill="#fbbf24"/>
+                <ellipse cx="130" cy="72" rx="55" ry="25" fill="#1e293b"/>
+                <rect x="75" y="72" width="110" height="28" rx="4" fill="#1e293b"/>
+                <circle cx="113" cy="102" r="7" fill="#0f172a"/>
+                <circle cx="147" cy="102" r="7" fill="#0f172a"/>
+                <circle cx="116" cy="99"  r="3" fill="white"/>
+                <circle cx="150" cy="99"  r="3" fill="white"/>
+                <path d="M116 118 Q130 132 144 118" stroke="#0f172a" stroke-width="4" fill="none" stroke-linecap="round"/>
+                <rect x="50" y="175" width="160" height="120" rx="24" fill="#1e40af"/>
+                <rect x="80" y="155" width="50" height="35" rx="8" fill="#fbbf24"/>
+                <rect x="100" y="155" width="60" height="35" rx="8" fill="#fcd34d"/>
+              </svg>
+            </div>
+          </div>
+          <!-- experience badge -->
+          <div class="exp-badge">
+            <span class="exp-num">3+</span>
+            <span class="exp-label">Years<br/>Experience</span>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="about-info reveal reveal-right">
+          <p class="about-bio">
+            I'm a passionate <strong>Full-Stack Web Developer</strong> with a love for building
+            clean, performant, and user-friendly digital products. I enjoy turning complex problems
+            into simple, beautiful interfaces.
+          </p>
+          <p class="about-bio">
+            When I'm not coding, you'll find me exploring new technologies, contributing to
+            open-source projects, or sketching UI concepts. I believe great software is where
+            engineering meets design.
+          </p>
+
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="fas fa-user detail-icon"></i>
+              <div>
+                <span class="detail-label">Name</span>
+                <span class="detail-value">Job Yauri</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-graduation-cap detail-icon"></i>
+              <div>
+                <span class="detail-label">Degree</span>
+                <span class="detail-value">Computer Science, BSc</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-briefcase detail-icon"></i>
+              <div>
+                <span class="detail-label">Experience</span>
+                <span class="detail-value">3+ Years</span>
+              </div>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt detail-icon"></i>
+              <div>
+                <span class="detail-label">Location</span>
+                <span class="detail-value">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">My <span class="accent">Skills</span></h2>
+      <p class="section-subtitle reveal">Technologies I work with</p>
+
+      <div class="skills-grid">
+
+        <!-- Skill cards -->
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-icon html-icon"><i class="fab fa-html5"></i></div>
+          <h3 class="skill-name">HTML5</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="95">
+              <div class="skill-fill"></div>
+            </div>
+            <span class="skill-pct">95%</span>
+          </div>
+          <p class="skill-desc">Semantic markup, accessibility, SEO best practices.</p>
+        </div>
+
+        <div class="skill-card reveal" data-delay="100">
+          <div class="skill-icon css-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3 class="skill-name">CSS3</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="90">
+              <div class="skill-fill"></div>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <p class="skill-desc">Animations, Grid, Flexbox, responsive design.</p>
+        </div>
+
+        <div class="skill-card reveal" data-delay="200">
+          <div class="skill-icon js-icon"><i class="fab fa-js-square"></i></div>
+          <h3 class="skill-name">JavaScript</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="88">
+              <div class="skill-fill"></div>
+            </div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <p class="skill-desc">ES6+, async/await, DOM manipulation, APIs.</p>
+        </div>
+
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-icon react-icon"><i class="fab fa-react"></i></div>
+          <h3 class="skill-name">React</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="85">
+              <div class="skill-fill"></div>
+            </div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <p class="skill-desc">Hooks, Context, Redux, component architecture.</p>
+        </div>
+
+        <div class="skill-card reveal" data-delay="100">
+          <div class="skill-icon node-icon"><i class="fab fa-node-js"></i></div>
+          <h3 class="skill-name">Node.js</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="78">
+              <div class="skill-fill"></div>
+            </div>
+            <span class="skill-pct">78%</span>
+          </div>
+          <p class="skill-desc">REST APIs, Express, authentication, databases.</p>
+        </div>
+
+        <div class="skill-card reveal" data-delay="200">
+          <div class="skill-icon git-icon"><i class="fab fa-git-alt"></i></div>
+          <h3 class="skill-name">Git</h3>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="82">
+              <div class="skill-fill"></div>
+            </div>
+            <span class="skill-pct">82%</span>
+          </div>
+          <p class="skill-desc">Version control, branching strategies, CI/CD.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Featured <span class="accent">Work</span></h2>
+      <p class="section-subtitle reveal">A few recent projects I've built</p>
+
+      <div class="projects-grid">
+        <article class="project-card reveal" data-delay="0">
+          <div class="project-media">
+            <img src="img/Dashboard.png" alt="Project 1" loading="lazy" onerror="this.src='img/perfil.png'" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Dashboard UI Kit</h3>
+            <p class="project-desc">A responsive admin dashboard built with React, Tailwind CSS and charting libraries.</p>
+            <div class="project-tags">
+              <span>React</span><span>API</span><span>Responsive</span>
+            </div>
+            <a href="#contact" class="btn btn-outline">Talk about it</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="100">
+          <div class="project-media">
+            <img src="img/ecommerce.webp" alt="Project 2" loading="lazy" onerror="this.src='img/perfil.png'" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">E‑commerce Landing</h3>
+            <p class="project-desc">Optimized landing page for a startup, focused on performance and conversion.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>Performance</span>
+            </div>
+            <a href="#contact" class="btn btn-outline">Let's chat</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="200">
+          <div class="project-media">
+            <img src="img/api.png" alt="Project 3" loading="lazy" onerror="this.src='img/perfil.png'" />
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">API Platform</h3>
+            <p class="project-desc">A scalable REST API built with Node.js, Express and MongoDB for a SaaS product.</p>
+            <div class="project-tags">
+              <span>Node.js</span><span>Express</span><span>MongoDB</span>
+            </div>
+            <a href="#contact" class="btn btn-outline">Get in touch</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get In <span class="accent">Touch</span></h2>
+      <p class="section-subtitle reveal">Let's work on something great together</p>
+
+      <div class="contact-grid">
+        <!-- Contact info cards -->
+        <div class="contact-cards reveal">
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <h4>Email</h4>
+            <p>alex@example.com</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <h4>Phone</h4>
+            <p>+51 921876815</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h4>Location</h4>
+            <p>Lima, Peru</p>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-wrap reveal reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="Project proposal..." required/>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">© 2026 Job Yauri. Designed & built with <span class="heart">♥</span></p>
+      <div class="footer-socials">
+        <a href="#" aria-label="LinkedIn"  class="social-icon sm"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="GitHub"    class="social-icon sm"><i class="fab fa-github"></i></a>
+        <a href="#" aria-label="Twitter"   class="social-icon sm"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram" class="social-icon sm"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
