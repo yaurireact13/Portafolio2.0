@@ -213,9 +213,10 @@ body {
   min-height: 100vh;
   display: flex; align-items: center;
   overflow: hidden;
-  background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #263348);
+  background: linear-gradient(-45deg, var(--bg), var(--surface), var(--bg), var(--surface2));
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
+  transition: background var(--transition);
 }
 
 @keyframes gradientShift {
@@ -262,8 +263,9 @@ body {
   font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 800; line-height: 1.1;
   margin-bottom: .75rem;
-  background: linear-gradient(135deg, #f1f5f9 30%, var(--accent2));
+  background: linear-gradient(135deg, var(--text) 30%, var(--accent2));
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  transition: background var(--transition);
 }
 .hero-role {
   font-family: 'Syne', sans-serif;
@@ -429,17 +431,21 @@ body {
 }
 .about-photo-frame {
   position: relative; z-index: 1;
+  width: 260px;
+  height: 300px;
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
-.about-svg { width: 100%; display: block; }
+.about-svg { width: 100%; height: 100%; display: block; }
 .about-profile-img {
-  width: 260px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   display: block;
   object-fit: cover;
   object-position: center;
+  transition: var(--transition);
 }
 
 .exp-badge {
@@ -962,6 +968,7 @@ body {
   .avatar-ring { width: 220px; height: 220px; }
 
   .about-profile-img { width: 200px; height: 230px; }
+  .about-photo-frame { width: 200px; height: 230px; }
 
   .skills-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
