@@ -181,7 +181,47 @@ type();
   draw();
 })();
 
-/* ── 5. SCROLL REVEAL ──────────────────────────────────────── */
+/* ── 5. PARTICLES.JS ───────────────────────────────────────── */
+particlesJS('particles-js', {
+  particles: {
+    number: { value: 80, density: { enable: true, value_area: 800 } },
+    color: { value: '#f97316' },
+    shape: { type: 'circle' },
+    opacity: { value: 0.5, random: true },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: '#0ea5e9',
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: 'none',
+      random: true,
+      straight: false,
+      out_mode: 'out',
+      bounce: false
+    }
+  },
+  interactivity: {
+    detect_on: 'canvas',
+    events: {
+      onhover: { enable: true, mode: 'repulse' },
+      onclick: { enable: true, mode: 'push' },
+      resize: true
+    },
+    modes: {
+      repulse: { distance: 100, duration: 0.4 },
+      push: { particles_nb: 4 }
+    }
+  },
+  retina_detect: true
+});
+
+/* ── 6. SCROLL REVEAL ──────────────────────────────────────── */
 const revealEls = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -217,7 +257,36 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 skillBars.forEach(bar => skillObserver.observe(bar));
 
-/* ── 7. FORMULARIO DE CONTACTO ─────────────────────────────── */
+/* ── 7. STATS COUNTERS ─────────────────────────────────────── */
+const statNumbers = document.querySelectorAll('.stat-number');
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const target = parseInt(entry.target.getAttribute('data-target'));
+      animateCounter(entry.target, 0, target, 2000);
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+function animateCounter(element, start, end, duration) {
+  const startTime = performance.now();
+  const animate = (currentTime) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const current = Math.floor(start + (end - start) * progress);
+    element.textContent = current + (element.textContent.includes('+') ? '+' : '');
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    }
+  };
+  requestAnimationFrame(animate);
+}
+
+statNumbers.forEach(num => statObserver.observe(num));
+
+/* ── 8. FORMULARIO DE CONTACTO ─────────────────────────────── */
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
@@ -251,7 +320,7 @@ if (contactForm) {
   });
 }
 
-/* ── 8. SMOOTH SCROLL (fallback para navegadores sin CSS support) ── */
+/* ── 9. SMOOTH SCROLL (fallback para navegadores sin CSS support) ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     const target = document.querySelector(this.getAttribute('href'));

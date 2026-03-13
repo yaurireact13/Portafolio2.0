@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
   <!-- Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
@@ -28,6 +30,7 @@
         <li><a href="#about"    class="nav-link">About</a></li>
         <li><a href="#skills"   class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#contact"  class="nav-link">Contact</a></li>
       </ul>
 
@@ -47,6 +50,8 @@
   <section class="hero" id="home">
     <!-- Animated canvas background -->
     <canvas id="heroCanvas"></canvas>
+    <!-- Particles background -->
+    <div id="particles-js"></div>
 
     <div class="hero-content">
       <!-- Left: text -->
@@ -62,6 +67,7 @@
         </p>
         <div class="hero-cta">
           <a href="#about" class="btn btn-primary">About Me</a>
+          <a href="cv.pdf" download class="btn btn-outline">📄 Descargar CV</a>
           <a href="#contact" class="btn btn-outline">Hire Me</a>
         </div>
         <!-- Social icons -->
@@ -179,87 +185,53 @@
     </div>
   </section>
 
+  <!-- ===================== STATS ===================== -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="10">+</div>
+          <div class="stat-label">Proyectos realizados</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="2">+</div>
+          <div class="stat-label">Años aprendiendo programación</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="5">+</div>
+          <div class="stat-label">Tecnologías dominadas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== SKILLS ===================== -->
   <section class="skills" id="skills">
     <div class="container">
       <h2 class="section-title reveal">My <span class="accent">Skills</span></h2>
       <p class="section-subtitle reveal">Technologies I work with</p>
 
-      <div class="skills-grid">
-
-        <!-- Skill cards -->
-        <div class="skill-card reveal" data-delay="0">
-          <div class="skill-icon html-icon"><i class="fab fa-html5"></i></div>
-          <h3 class="skill-name">HTML5</h3>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-pct="95">
-              <div class="skill-fill"></div>
-            </div>
-            <span class="skill-pct">95%</span>
-          </div>
-          <p class="skill-desc">Semantic markup, accessibility, SEO best practices.</p>
+      <div class="skills-icons">
+        <div class="skill-icon-large reveal" data-delay="0">
+          <i class="fab fa-html5"></i>
+          <span>HTML</span>
         </div>
-
-        <div class="skill-card reveal" data-delay="100">
-          <div class="skill-icon css-icon"><i class="fab fa-css3-alt"></i></div>
-          <h3 class="skill-name">CSS3</h3>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-pct="90">
-              <div class="skill-fill"></div>
-            </div>
-            <span class="skill-pct">90%</span>
-          </div>
-          <p class="skill-desc">Animations, Grid, Flexbox, responsive design.</p>
+        <div class="skill-icon-large reveal" data-delay="100">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS</span>
         </div>
-
-        <div class="skill-card reveal" data-delay="200">
-          <div class="skill-icon js-icon"><i class="fab fa-js-square"></i></div>
-          <h3 class="skill-name">JavaScript</h3>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-pct="88">
-              <div class="skill-fill"></div>
-            </div>
-            <span class="skill-pct">88%</span>
-          </div>
-          <p class="skill-desc">ES6+, async/await, DOM manipulation, APIs.</p>
+        <div class="skill-icon-large reveal" data-delay="200">
+          <i class="fab fa-js-square"></i>
+          <span>JavaScript</span>
         </div>
-
-        <div class="skill-card reveal" data-delay="0">
-          <div class="skill-icon react-icon"><i class="fab fa-react"></i></div>
-          <h3 class="skill-name">React</h3>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-pct="85">
-              <div class="skill-fill"></div>
-            </div>
-            <span class="skill-pct">85%</span>
-          </div>
-          <p class="skill-desc">Hooks, Context, Redux, component architecture.</p>
+        <div class="skill-icon-large reveal" data-delay="300">
+          <i class="fab fa-php"></i>
+          <span>PHP</span>
         </div>
-
-        <div class="skill-card reveal" data-delay="100">
-          <div class="skill-icon node-icon"><i class="fab fa-node-js"></i></div>
-          <h3 class="skill-name">Node.js</h3>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-pct="78">
-              <div class="skill-fill"></div>
-            </div>
-            <span class="skill-pct">78%</span>
-          </div>
-          <p class="skill-desc">REST APIs, Express, authentication, databases.</p>
+        <div class="skill-icon-large reveal" data-delay="400">
+          <i class="fas fa-database"></i>
+          <span>MySQL</span>
         </div>
-
-        <div class="skill-card reveal" data-delay="200">
-          <div class="skill-icon git-icon"><i class="fab fa-git-alt"></i></div>
-          <h3 class="skill-name">Git</h3>
-          <div class="skill-bar-wrap">
-            <div class="skill-bar" data-pct="82">
-              <div class="skill-fill"></div>
-            </div>
-            <span class="skill-pct">82%</span>
-          </div>
-          <p class="skill-desc">Version control, branching strategies, CI/CD.</p>
-        </div>
-
       </div>
     </div>
   </section>
@@ -274,6 +246,10 @@
         <article class="project-card reveal" data-delay="0">
           <div class="project-media">
             <img src="img/Dashboard.png" alt="Project 1" loading="lazy" onerror="this.src='img/perfil.png'" />
+            <div class="project-overlay">
+              <a href="https://github.com/jobyauri/dashboard-ui" target="_blank" class="project-link demo">Ver Demo</a>
+              <a href="https://github.com/jobyauri/dashboard-ui" target="_blank" class="project-link code">Ver Código</a>
+            </div>
           </div>
           <div class="project-body">
             <h3 class="project-title">Dashboard UI Kit</h3>
@@ -281,13 +257,16 @@
             <div class="project-tags">
               <span>React</span><span>API</span><span>Responsive</span>
             </div>
-            <a href="#contact" class="btn btn-outline">Talk about it</a>
           </div>
         </article>
 
         <article class="project-card reveal" data-delay="100">
           <div class="project-media">
             <img src="img/ecommerce.webp" alt="Project 2" loading="lazy" onerror="this.src='img/perfil.png'" />
+            <div class="project-overlay">
+              <a href="https://jobyauri.github.io/ecommerce-landing" target="_blank" class="project-link demo">Ver Demo</a>
+              <a href="https://github.com/jobyauri/ecommerce-landing" target="_blank" class="project-link code">Ver Código</a>
+            </div>
           </div>
           <div class="project-body">
             <h3 class="project-title">E‑commerce Landing</h3>
@@ -295,13 +274,16 @@
             <div class="project-tags">
               <span>HTML</span><span>CSS</span><span>Performance</span>
             </div>
-            <a href="#contact" class="btn btn-outline">Let's chat</a>
           </div>
         </article>
 
         <article class="project-card reveal" data-delay="200">
           <div class="project-media">
             <img src="img/api.png" alt="Project 3" loading="lazy" onerror="this.src='img/perfil.png'" />
+            <div class="project-overlay">
+              <a href="https://api-platform-demo.herokuapp.com" target="_blank" class="project-link demo">Ver Demo</a>
+              <a href="https://github.com/jobyauri/api-platform" target="_blank" class="project-link code">Ver Código</a>
+            </div>
           </div>
           <div class="project-body">
             <h3 class="project-title">API Platform</h3>
@@ -309,9 +291,40 @@
             <div class="project-tags">
               <span>Node.js</span><span>Express</span><span>MongoDB</span>
             </div>
-            <a href="#contact" class="btn btn-outline">Get in touch</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">My <span class="accent">Experience</span></h2>
+      <p class="section-subtitle reveal">Education and professional background</p>
+
+      <div class="experience-grid">
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Ingeniería de Software</h3>
+          <p>Estudios en desarrollo de software, algoritmos y sistemas informáticos.</p>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Proyectos académicos</h3>
+          <p>Desarrollo de aplicaciones web y móviles durante la carrera universitaria.</p>
+        </div>
+        <div class="exp-card reveal">
+          <div class="exp-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Desarrollo Full Stack</h3>
+          <p>Experiencia en front-end y back-end con tecnologías modernas.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -326,19 +339,24 @@
         <!-- Contact info cards -->
         <div class="contact-cards reveal">
           <div class="contact-card">
-            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/jobyauri" target="_blank">github.com/jobyauri</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <h4>LinkedIn</h4>
+            <a href="https://linkedin.com/in/jobyauri" target="_blank">linkedin.com/in/jobyauri</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/51921876815" target="_blank">+51 921876815</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <h4>Email</h4>
-            <p>correo@example.com</p>
-          </div>
-          <div class="contact-card">
-            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-            <h4>Phone</h4>
-            <p>+51 921876815</p>
-          </div>
-          <div class="contact-card">
-            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h4>Location</h4>
-            <p>Lima, Peru</p>
+            <a href="mailto:correo@example.com">correo@example.com</a>
           </div>
         </div>
 
