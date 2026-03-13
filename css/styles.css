@@ -435,10 +435,11 @@ body {
 }
 .about-svg { width: 100%; display: block; }
 .about-profile-img {
-  width: 100%;
-  height: auto;
+  width: 260px;
+  height: 300px;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 
 .exp-badge {
@@ -959,6 +960,8 @@ body {
 
   .hero-avatar { width: 220px; }
   .avatar-ring { width: 220px; height: 220px; }
+
+  .about-profile-img { width: 200px; height: 230px; }
 
   .skills-grid { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
