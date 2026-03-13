@@ -434,6 +434,12 @@ body {
   border: 1px solid var(--border);
 }
 .about-svg { width: 100%; display: block; }
+.about-profile-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
 .exp-badge {
   position: absolute;
